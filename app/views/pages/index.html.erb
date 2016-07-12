@@ -1,0 +1,13 @@
+<ul>
+<% @categories.each do |c| %>
+	<li> <%= c.name %> (<%= c.movies.size %>)</li>
+	<ul>
+	<% c.movies.each do |m| %>
+		<li style="color: <%= m.color %>"> <%= m.id %>) <%= m.name %>
+		<a href="<%=recommend_path(movie_id: m.id) %>"> Recomendar </a>
+
+		</li>
+	<% end %>
+	</ul>
+<% end %>
+</ul>

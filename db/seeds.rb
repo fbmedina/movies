@@ -18,9 +18,9 @@ categories.each do |i|
 end
 
 5.times do
-  Movie.create(name: Faker::Superhero.name, recommended: true, category_id: c.sample.id)
+  Movie.create(name: Faker::Superhero.name, recommended: true, category: c.sample)
 end
 
 5.times do
-  Movie.create(name: Faker::Superhero.name, recommended: false, category_id: c.sample.id)
+  Movie.create(name: Faker::Superhero.name, recommended: false, category: c.sample)
 end
